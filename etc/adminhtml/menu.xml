@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+      <menu>
+          <add id="BugsBunny_LogViewer::log_viewer"
+               title="BugsBunny Log Viewer"
+               module="BugsBunny_LogViewer"
+               sortOrder="999"
+               resource="BugsBunny_LogViewer::log_viewer"
+               parent="Magento_Backend::system"
+               dependsOnConfig="log_viewer/general/enable"/>
+          <add id="BugsBunny_LogViewer::orders_log"
+               title="View Logs"
+               module="BugsBunny_LogViewer"
+               sortOrder="10"
+               parent="BugsBunny_LogViewer::log_viewer"
+               action="logviewer/logfile/index"
+               resource="BugsBunny_LogViewer::log_viewer_view"
+               dependsOnConfig="log_viewer/general/enable"/>
+      </menu>
+</config>
