@@ -1,4 +1,4 @@
-# BugsBunny: Magento 2 Log Viewer Module
+# M2Commerce: Magento 2 Log Viewer Module
 
 This Magento 2 extension provides a convenient **Admin Panel interface** for viewing Magento system logs (`system.log`, `debug.log`, etc.) directly from the backend — without needing FTP or SSH access.
 
@@ -20,7 +20,7 @@ It supports real-time log tailing and keyword filtering, making it easier for de
 ## ⚙️ Configuration
 
 Go to:  
-**Stores > Configuration > BugsBunny > Log Viewer**
+**Stores > Configuration > M2Commerce > Log Viewer**
 
 You will find the following options:
 
@@ -34,18 +34,17 @@ You will find the following options:
 
 Once enabled, navigate to the admin route:
 ```
-Admin > Bugs Bunny > Log Viewer
+Admin > System > M2Commerce Log Viewer > Log Viewer
 ```
 # Example Output Search
 ![1.png](Screenshots/1.png)
 ![2.png](Screenshots/2.png)
 ![3.png](Screenshots/3.png)
-![4.png](Screenshots/4.png)
 
 Then run the following Magento CLI commands:
 
 ```bash
-php bin/magento module:enable BugsBunny_LogViewer
+php bin/magento module:enable M2Commerce_LogViewer
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento cache:clean

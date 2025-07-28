@@ -1,6 +1,12 @@
 <?php
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
 
-use BugsBunny\LogViewer\Block\LogFile;
+use M2Commerce\LogViewer\Block\LogFile;
 use Magento\Framework\Escaper;
 
 /**
@@ -32,39 +38,13 @@ $previousLogUrl = $block->getLoadPreviousLogUrl();
     </a>
     <textarea id="log-output" rows="35"><?= /* @noEscape */  $block->tailFile($logPath, $displayLines) ?></textarea>
 </div>
-<script>
-    require(['jquery'], function($) {
-        $(document).ready(function () {
-            $('#load-previous').on('click', function () {
-                let $btn = $(this),
-                    file = $btn.data('file'),
-                    start = parseInt($btn.data('start')),
-                    displayLines = parseInt($btn.data('display-lines')),
-                    ajaxUrl = '<?= $escaper->escapeJs($previousLogUrl) ?>';
-
-                $.ajax({
-                    url: ajaxUrl,
-                    showLoader: true,
-                    data: {
-                        file: file,
-                        offset: start,
-                        lines: displayLines,
-                        form_key: FORM_KEY
-                    },
-                    success: function (res) {
-                        if (res.success) {
-                            if (res.data.trim()) {
-                                $('#log-output').prepend(res.data + '\n');
-                                $btn.data('start', start + displayLines);
-                            }
-
-                            if (!res.has_more) {
-                                $btn.prop('disabled', true);
-                            }
-                        }
-                    }
-                });
-            });
-        });
-    });
+<script type="text/x-magento-init">
+    {
+        "#load-previous": {
+            "M2Commerce_LogViewer/js/load-log": {
+                "buttonId": "load-previous",
+                "ajaxUrl": "<?= $escaper->escapeJs($previousLogUrl) ?>"
+        }
+    }
+}
 </script>

@@ -1,13 +1,22 @@
 <?xml version="1.0" ?>
+<!--
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_YoutubeWidget
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
+-->
+
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="bugsbunny" translate="label" sortOrder="110" class="bugsbunny-tab">
-            <label>BugsBunny Extensions</label>
+        <tab id="m2commerce" translate="label" sortOrder="110" class="m2commerce-tab">
+            <label>M2Commerce Extensions</label>
         </tab>
         <section id="log_viewer" translate="label" sortOrder="999" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Log Viewer</label>
-            <tab>bugsbunny</tab>
-            <resource>BugsBunny_LogViewer::log_viewer_settings</resource>
+            <tab>m2commerce</tab>
+            <resource>M2Commerce_LogViewer::log_viewer_settings</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>General</label>
                 <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -24,7 +33,7 @@
                 </field>
                 <field id="items_per_page" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Items Per Page</label>
-                    <source_model>BugsBunny\LogViewer\Model\Config\Source\ListPerPage</source_model>
+                    <source_model>M2Commerce\LogViewer\Model\Config\Source\ListPerPage</source_model>
                     <comment>Number of logs display on log list page</comment>
                     <depends>
                         <field id="enable">1</field>
@@ -32,14 +41,14 @@
                 </field>
                 <field id="default_sort_column" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Default Sort Column</label>
-                    <source_model>BugsBunny\LogViewer\Model\Config\Source\SortFields</source_model>
+                    <source_model>M2Commerce\LogViewer\Model\Config\Source\SortFields</source_model>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
                 </field>
                 <field id="default_sort_dir" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Default Sort Direction</label>
-                    <source_model>BugsBunny\LogViewer\Model\Config\Source\Direction</source_model>
+                    <source_model>M2Commerce\LogViewer\Model\Config\Source\Direction</source_model>
                     <depends>
                         <field id="enable">1</field>
                     </depends>

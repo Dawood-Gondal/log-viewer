@@ -1,11 +1,20 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_YoutubeWidget
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
+ * @author      dawoodgondaldev@gmail.com
+ */
+-->
+
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="BugsBunny_LogViewer::css/styles.css" />
+        <css src="M2Commerce_LogViewer::css/styles.css" />
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="BugsBunny\LogViewer\Block\LogFile" name="bugsbunny.logviewer.view" template="BugsBunny_LogViewer::logfile/view.phtml"/>
+            <block class="M2Commerce\LogViewer\Block\LogFile" name="m2commerce.logviewer.view" template="M2Commerce_LogViewer::logfile/view.phtml"/>
         </referenceContainer>
     </body>
 </page>
