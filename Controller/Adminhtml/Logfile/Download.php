@@ -1,13 +1,14 @@
 <?php
-declare(strict_types=1);
 /**
- * @category    BugsBunny Enterprise
- * @package     BugsBunny_OrderComment
- * @copyright   Copyright (c) 2023 BugsBunny Enterprise
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
  * @author      dawoodgondaldev@gmail.com
  */
 
-namespace BugsBunny\LogViewer\Controller\Adminhtml\Logfile;
+declare(strict_types=1);
+
+namespace M2Commerce\LogViewer\Controller\Adminhtml\Logfile;
 
 use Exception;
 use Magento\Backend\App\Action\Context;
@@ -19,12 +20,16 @@ use Magento\Framework\Controller\ResultInterface;
 class Download extends System
 {
 
-    public const ADMIN_RESOURCE = 'BugsBunny_LogViewer::log_viewer_download';
+    public const ADMIN_RESOURCE = 'M2Commerce_LogViewer::log_viewer_download';
     /**
      * @var FileFactory
      */
     protected $fileFactory;
 
+    /**
+     * @param Context $context
+     * @param FileFactory $fileFactory
+     */
     public function __construct(Context $context, FileFactory $fileFactory)
     {
         parent::__construct($context);

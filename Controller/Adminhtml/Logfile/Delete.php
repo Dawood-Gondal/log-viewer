@@ -1,17 +1,17 @@
 <?php
-declare(strict_types=1);
-
 /**
- * @category    BugsBunny Enterprise
- * @package     BugsBunny_OrderComment
- * @copyright   Copyright (c) 2023 BugsBunny Enterprise
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
  * @author      dawoodgondaldev@gmail.com
  */
 
-namespace BugsBunny\LogViewer\Controller\Adminhtml\Logfile;
+declare(strict_types=1);
 
-use BugsBunny\LogViewer\Block\LogFile;
-use BugsBunny\LogViewer\Helper\Data;
+namespace M2Commerce\LogViewer\Controller\Adminhtml\Logfile;
+
+use M2Commerce\LogViewer\Block\LogFile;
+use M2Commerce\LogViewer\Helper\Data;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Controller\Adminhtml\System;
 use Magento\Framework\App\Response\Http\FileFactory;
@@ -21,7 +21,7 @@ use Magento\Framework\Filesystem\Driver\File;
 class Delete extends System
 {
 
-    public const ADMIN_RESOURCE = 'BugsBunny_LogViewer::log_viewer_delete';
+    public const ADMIN_RESOURCE = 'M2Commerce_LogViewer::log_viewer_delete';
     /**
      * @var FileFactory
      */

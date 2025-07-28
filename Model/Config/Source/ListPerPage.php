@@ -1,19 +1,22 @@
 <?php
-declare(strict_types=1);
-
 /**
- * @category    BugsBunny Enterprise
- * @package     BugsBunny_OrderComment
- * @copyright   Copyright (c) 2023 BugsBunny Enterprise
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
  * @author      dawoodgondaldev@gmail.com
  */
 
-namespace BugsBunny\LogViewer\Model\Config\Source;
+declare(strict_types=1);
+
+namespace M2Commerce\LogViewer\Model\Config\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
 class ListPerPage implements OptionSourceInterface
 {
+    /**
+     * @return array[]
+     */
     public function toOptionArray()
     {
         return [

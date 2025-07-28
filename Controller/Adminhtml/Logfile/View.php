@@ -1,14 +1,14 @@
 <?php
-declare(strict_types=1);
-
 /**
- * @category    BugsBunny Enterprise
- * @package     BugsBunny_OrderComment
- * @copyright   Copyright (c) 2023 BugsBunny Enterprise
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2025 M2Commerce Enterprise
  * @author      dawoodgondaldev@gmail.com
  */
 
-namespace BugsBunny\LogViewer\Controller\Adminhtml\Logfile;
+declare(strict_types=1);
+
+namespace M2Commerce\LogViewer\Controller\Adminhtml\Logfile;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\View\Result\Page;
@@ -19,7 +19,7 @@ class View extends Action
     /**
      * Authorization level of a basic admin session
      */
-    public const ADMIN_RESOURCE = 'BugsBunny_LogViewer::log_viewer_view';
+    public const ADMIN_RESOURCE = 'M2Commerce_LogViewer::log_viewer_view';
 
     /**
      * @var PageFactory

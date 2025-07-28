@@ -1,13 +1,13 @@
 <?php
 /**
- * @category    BugsBunny Enterprise
- * @package     BugsBunny_OrderComment
- * @copyright   Copyright (c) 2023 BugsBunny Enterprise
+ * @category    M2Commerce Enterprise
+ * @package     M2Commerce_OrderComment
+ * @copyright   Copyright (c) 2023 M2Commerce Enterprise
  * @author      dawoodgondaldev@gmail.com
  */
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'BugsBunny_LogViewer',
+    'M2Commerce_LogViewer',
     __DIR__
 );
